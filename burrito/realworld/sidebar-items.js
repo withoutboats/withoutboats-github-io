@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["RealWorld","RealWorld represents the stdin/stdout/stderr handles for the process. It should not be instantiated directly; it is intended to be used inside of a Burrito through the implementation of Default for Burrito, as in:"]]});

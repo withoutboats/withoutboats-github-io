@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["burrito","Create a default burrito (wrapping the stdio handles)."]],"struct":[["Burrito","The fundamental monadic type of the burrito library."]],"trait":[["FromAddr",""],["FromPath",""]]});
