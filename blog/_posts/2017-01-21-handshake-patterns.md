@@ -10,7 +10,7 @@ categories: rust patterns traits
 
 That is, if Foo and Bar are both `Alpha`s and Baz and Quux are both `Omega`s, you can compose Foo with Baz or Quux, and the same with Bar, and so on.
 
-This is not a trivial problem. In particular, we have already constrained ourselves by requiring that `Alpha` and `Omega` both be _traits_. This requirement implies that both sides of the 'handshake' we are implementing are open sets of types, and that new authors will be able to extend our system by defining new `Alpha`s and new `Omega`s. In fact, an `Alpha` can be written by one another, an `Omega` by another, and though neither author was aware of one another, a third author can compose their two types together.
+This is not a trivial problem. In particular, we have already constrained ourselves by requiring that `Alpha` and `Omega` both be _traits_. This requirement implies that both sides of the 'handshake' we are implementing are open sets of types, and that new authors will be able to extend our system by defining new `Alpha`s and new `Omega`s. In fact, an `Alpha` can be written by one author, an `Omega` by another, and though neither author was aware of one another, a third author can compose their two types together.
 
 To make this pattern more concrete, we'll look at one use case: serialization. It would be ideal for any serializable type be serializable by any serializer, and for any serializer to be able to serialize any serializable type. We'll look at the trade offs for different ways of implementing `Serialize` and `Serializer`, starting with the definition currently in `serde`.
 
